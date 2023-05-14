@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/iquery@1.12.4/dist/iquery.min.js"></script>
+		<script src="https: //cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+
+		<title>Myfirstwebpage</title>
+		<script type="text/javascript">
+			function up() {
+				alert("加油加油！");
+			}
+		</script>
+		<script type="text/javascript">
+			}
+		</script>
+
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript">
+			window.addEventListen er('load', function() {
+				var audio = document.querySelector('audio');
+				audio.play();
+			});
+			window.addEventListener('beforeunload', function() {
+				var audio = document.querySelector('audio');
+				audio.pause();
+				audio.currentTime = 0;
+			});
+		</script>
+
+		<style>
+			#container {
+				width: auto;
+				height: 600px;
+
+				overflow: hidden;
+				position: relative;
+			}
+
+			.danmu {
+				position: absolute;
+				right: 0;
+				white-space: nowrap;
+				font-size: 24px;
+				color: white;
+			}
+
+			@keyframes move {
+				from {
+					right: 0;
+				}
+
+				to {
+					right: calc(100% + 200px);
+				}
+			}
+
+			body {
+				background-image: url("img/p1.png");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+		</style>
+
+
+
+
+
+
+
+
+		<!-- 此行上面为css修饰代码区域-------------- -->
+	</head>
+	<body>
+		<!-- bootscrp插件-->
+
+		<div class="nav" style="box-shadow: 0px 0px 3px 3px #000;
+	
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: bisque;
+	opacity: 0.7;">
+			<ul>
+				<li>
+					<a href="#header">首页</a>
+				</li>
+				<li>
+					<a href="#gerengjianjie">个人信息</a>
+
+				</li>
+
+				<li>
+					<a href="#header2">学习计划</a>
+				</li>
+
+				<li>
+					<a href="#wodejiaxiang">我的家乡</a>
+
+
+			</ul>
+		</div>
+
+
+
+
+
+		<script type="text/javascript">
+			mui.init()
+		</script>
+
+		<audio autoplay loop>
+			<source src="music/Shadow Of The Sun.mp3" type="audio/mp3" autoplay="autoplay">
+		</audio>
+
+
+
+
+		<!-- 返回顶部标签 -->
+
+		<script type="text/javascript">
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("scroll-to-top").style.display = "block";
+				} else {
+					document.getElementById("scroll-to-top").style.display = "none";
+				}
+			}
+		</script>
+		<a href="#" id="scroll-to-top"><img style="height: 10px;width: 10px;" src="img/direction-up.png" alt="回到顶部"></a>
+
+		<!-- -------------------------------------------------------------------- -->
+		<div>
+			<div id="header">
+				<div class="logo">
+					<img src="img/logo.png" alt="">
+					<h4>My Web page</h4>
+					<p>博学力行守正创新</p>
+
+				</div>
+				<!-- 滚动字幕 -->
+				<!--<tr>
+				<td height="45" valign="top">
+					<ul>
+						<marquee onmouseover=this.stop() onmouseout=this.start() scrollAmount=1 scrollDelay=1
+							direction="up" height="360">
+							<li class="STYLE4">
+								<div class="gundong" align="left">散，残梦终于消散</div>
+							</li>
+							<li class="STYLE4">
+								<div class="gundong" align="left">像飞走的船</div>
+							</li>
+							<li class="gundong" class="STYLE4">
+								<div class="gundong" align="left">让孤岛难堪</div>
+							</li>
+							<li class="STYLE4">
+								<div class="gundong" align="left">了，热血焉能了</div>
+							</li>
+							<li>
+								<div class="gundong" align="left"><span class="STYLE4">风月焉能了，往事焉能了</span><br />
+								</div>
+							</li>
+						</marquee>
+			</tr>  -->
+
+
+
+				<!-- ------------------------------------------- -->
+				<div id="container"></div>
+				<script>
+					// 定义一个函数用来创建和插入弹幕
+					function createDanmu(text) {
+						// 创建一个span元素
+						var danmu = document.createElement("span");
+						// 设置其文本内容为参数值
+						danmu.innerText = text;
+						// 设置其类名为danmu
+						danmu.className = "danmu";
+
+						// 设置其随机的高度
+						danmu.style.top = Math.random() * (container.clientHeight - danmu.clientHeight) + "px";
+						// 设置其随机的颜色
+						danmu.style.color = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," +
+							Math.floor(Math.random() * 256) + ")";
+						// 将span元素插入到容器元素中
+						container.appendChild(danmu);
+						// 使用CSS动画来让span元素从右向左移动
+						danmu.style.animation = "move " + (5 + Math.random() * 5) + "s linear infinite";
+					}
+
+					// 获取容器元素
+					var container = document.getElementById("container");
+					// 定义一个数组用来存放一些弹幕内容
+					var texts = ["欢迎来到我的网页呀", "何昕宇表示：爱了爱了", "九日：没点网站我不是很认可", "我关某表示赞赏", "大佬贝贝到此一游", "我黑虎阿福实名爱看", "哇塞！", "麻什么平？",
+						"杨什么民？", "点赞", "我石泽旭实名喜欢", "家人们谁懂啊", "远远到此一游", "朱某到此一游", "我任怡旭喜欢", "哈哈哈"
+					];
+					// 定义一个定时器，每隔一秒创建并插入一条弹幕
+					setInterval(function() {
+						// 随机选择一个弹幕内容
+						var text = texts[Math.floor(Math.random() * texts.length)];
+						// 调用函数创建并插入弹幕
+						createDanmu(text);
+					}, 1000);
+				</script>
+				<div style="width: 100%;height: 100px;"></div>
+			</div>
+
+			<div id="gerengjianjie">
+
+
+				<div style="display: inline-block;" id="gerengjianjie1">
+					<h1>个人介绍：</h1>
+
+					<img id="logo2" src="img/logo.png" alt="" srcset="">
+					<div id="miaoshu">
+						<ul>
+							<li>姓名：麻子平</li>
+
+							<li>学校：长沙理工</li>
+
+							<li>学号：0326</li>
+
+							<li>班级：计科三班</li>
+
+							<li>职位：寝室长</li>
+							<li>页面指导老师：晏教授</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 动画插入 !!版权申明：扣子得嘛-->
+				<div style="display: inline-block;" id="bodymovin" class="bodymovin"><img
+						style=" width: 30%; height: 30%;" src="img/马上金融_提额1.png" alt="时间"></div>
+
+
+			</div>
+
+
+			<script type="text/javascript">
+				function showme1() {
+
+				}
+			</script>
+
+
+
+			<div id="xuexijihua">
+				<script src="js/mui.js"></script>
+				<script type="text/javascript">
+					mui.init()
+				</script>
+				<div style="width: 100%;height: 100px;"></div>
+			</div>
+
+
+
+
+			<div id="header2">
+				<h1 style="margin-left: 20px;color: black;">我的学习计划：</h1>
+			</div>
+			<hr style="border-bottom: 2px solid">
+			<div style="width: 25px;height: 25px;background-color:antiquewhite;margin: 0 20px;border-radius: 20px;">
+			</div>
+			<div style="width: 50px;height: 50px;background-color:antiquewhite;margin: 0 50px;border-radius: 30px;">
+			</div>
+
+
+
+
+			<div class="em">
+
+				<p style="text-indent:2em">
+					<b>一年之计在于春，一个学期之计在于开始，新学期初始，一切事物都充满了活力与生机。新生活意味着新开始，新开始象征着新的挑战。俗话说好的开始是成功的一半。新年、新春、新学期，我也该有新的打算。过去的一年在我的努力之下，学习部取得了必须的成绩，在本年的学习中我们将继承优点，改正不足，争取把学习做的更好。本学年工作计划如下：
+				</p>
+				<p style="text-indent:2em"><b>一：主要学习目标</b></p>
+				<p style="text-indent:2em">
+					明确学习目标，打好必须的语言基础。争取获得优良成绩，能切实在大学里学到丰富的专业知识和基础常识。增加文化素养，提升自身本事，端正学习态度，培养进取勤奋的学风。做学习计划来自我敦促，自我勉励。反思自我有哪些方面做到不足，反思自我该如何改善、反思自我继续努力的方向方法，并且反思自我有哪些反面值得肯定，仅有不断地反省，才能为未来的路指明方向。
+				</p>
+				　　<p style="text-indent:2em">　二：具体安排</p></b>
+				　　<b>1.坚持预习，坚持在上课前先预习一遍课文，在上课之前对所上的资料有所了解，能提高听课效率。并且在教师上完一章的资料后，能够主动复习。温故而知新。
+
+					　　2.每一天早起一个小时时间背诵英语课文。
+
+					　　3.每一天坚持到自习室上晚自习两个小时。
+
+					　　4.对于课程知识，要多想多问，并且把其中有收货的部分记入笔记之中。
+
+					　　5.每个月进行一次学习清算，反思自我这个月是否达成了学习计划，有哪一些做得不足的地方，下个月要注意改善。
+
+					　　6.订阅英语辅导报，自学报纸上出现的一些英语单词，并且完成报纸上的练习题。
+
+					　　8.在这学期经过全国大学生英语四级考试，英语是我的专业，我系一向都比较重视英语的学习，抓好英语学习对我说也是很重要的，尤其大学英语四级考试关乎大家的毕业证书和学位证书。为进一步提我的英语成绩，能够更加自信、坦然地应对四级考试。
+
+					　　7.身为一个英语专业的学生，对于英文的写作本事是十分重要的，所以应当坚持在平时多写一些练笔。
+
+					　　8.争取利用周末时间多学一门外语。
+
+					　　9.培养良好的学习兴趣。俗话说：兴趣是最好的教师。我认为，关键是进取的学习、主动的学习。渐渐把自我带进书的海洋中，这样，才能潜移默化地使自我爱上学习。古人说：学为立世之本，学能够立德，学能够增智，学能够致用。学习是成就事业的基础，是人生的出发点，也是人生的极致。在这世间，任何事都讲究公平，公平，人心就平，心平了就和，和谐安乐由之生焉。学习也是如此，你爱它，它也会回馈于你。</b>
+				<b>
+					<p style="text-indent:2em">
+						计划的制定可不是纸上谈兵，最重要的是付诸于实际的有效行动。我相信，我会通过计划的制定和严格的执行而有所收获。具体来说，为了夯实专业理论知识，我会在大学初期的公共基础课上打牢根基，为后面的专业课做好铺垫。当然，为了培养较高的新闻业务能力，我将会在大一和大二阶段尽可能多接触关于这方面的知识。在平时的学习中，注意勤思多练，特别是要注重对如dreamweaver等软件的摸索，并能够灵活运用。至于博闻强识的能力，虽说也许会有一定的难度。但我仍会利用一切可以利用的时间，参加各类社团活动，锻炼自己的人际交往能力。与此同时，充足的课余时间也会让我有更多自主安排的空间去图书馆或听讲座，开阔视野，丰富知识。
+
+						毫无疑问，“冰冻三尺，非一日之寒”，罗马也不是一天就能够建成的。在计划实施的过程中，自然会避无可避的遇到诸多问题。故而，在实施过程中的调整与改变就显得尤为必要。我会在具体操作中，在结合他人经验和自身实际的基础上，做出合理评估，保证计划有条不紊的落实。
+					</p>
+					<p style="text-indent:2em">以上各项资料便是本学期的大体计划。如有不妥请教师同学指正。</p>
+				</b>
+				　　
+
+
+
+
+			</div>
+			<div style="text-align: center;width: 100%;"><button type="button" onclick="up()"
+					class="mui-btn mui-btn-blue mui-btn-outlined">鼓励一下</button></div>
+		</div>
+		<div id="wodejiaxiang">
+			<div class="toubu">
+				<h1 style="margin-left: 30px;">
+					<h1>我的家乡>边城 茶峒</h1>
+			</div>
+			<hr style="margin: 10px 0;">
+			<div class="neirong">
+
+				<p style="text-indent:2em;font-style: italic;">
+					由四川过湖南去，靠东有一条官路。这官路将近湘西边境到了一个地方名为“茶峒”的小山城时，有一小溪，溪边有座白色小塔，塔下住了一户单独的人家。这人家只一个老人，一个女孩子，一只黄狗。
+					小溪流下去，绕山岨流，约三里便汇入茶峒大河。人若过溪越小山走去，则只一里路就到了茶峒城边。
+
+					——沈从文《边城》</p>
+			</div><img class="chadongtupian" src="img/chadong2.webp" alt="chadong">
+			<div class="neirong">
+				<p style="text-indent:2em">
+
+					「青青石板路，排排吊脚楼，潺潺清水江…」
+
+					很多人一直提及的边城，其实并不是湘西的凤凰，凤凰只是因沈从文旧所，又是沈老先生长眠之地而闻名。
+
+					而离凤凰不远的花垣县茶峒才是边城的所在。</p>
+
+				<p>距花垣县城25公里地之处，在酉水河边，有一座安静的小镇，那就是边城。边城茶峒原名茶峒，因沈从文著名中篇小说《边城》而扬名，2005年正式更名为边城镇。
+
+					边城如今是渝黔湘交接的地方，乘着翠翠当年摆动的拉索船，荡过那条清澈至底的流在两山之间的河流，就是重庆秀山了，
+
+
+					而穿过小巷会看到立在桥边的界碑，已有几十年的历史了。桥的另一头就是贵州。河边的吊角楼，嘻嘻的孩子，郁郁的青山，一切是那么的涤荡身心。翠翠已化身为一尊石像与她的那只黄狗翘首在河中央的石滩上，等待着她所企盼的人从远方归来。
+
+			</div>
+			<div><img id="p2" class="chadongtupian" src="img/chadong4.webp" alt=""></div>
+			<div class="neirong">
+				<p style="text-indent:2em">
+					在这里你可以看到历史，70年代的农业银行，大跃进、文革期间的标语，几十年屹立在河边的古塔上茅草丛丛，古老的制炮作坊，百年的古楼，还有古朴的民风，仿佛你沿着时光的隧道回到了过去，你的思绪与清河中的鱼儿一起游荡，随着那轻软的水草浮想连连。醉人的风景净化着你，爽口的美食滋润着你，朗朗的笑声与流水声荡漾。走在那一条条狭窄的老街，踩着一块块青石板铺地的小巷，别有一番风味扑面而来。沱江两边林立的吊脚楼错落有致，街道两边保留很好的店铺一间挨着一间，似乎只有三五步的距离，看似喧闹、拥挤却又那样纯朴与悠闲。街道两边竹编工艺、自染的布衫和披肩，还有那些漂亮的银饰，很具有民族风情的刺绣、香包、挂饰、织锦、项链、手镯让人应接不暇，古老沉重的银首饰，透着古老神秘色彩，有着别样的风情。
+
+					晨雾中的边城更是让人难忘，临江而望，淡淡弥漫的一层雾气，层层叠叠，好一幅绝色的水墨画卷。泛舟沱江，乌船划开江面的层层水波，掌舵的船工身着民族服饰，一顶斗笠、一根竹篙、一首山歌，那情这景绝非语言可以言传的了！
+				</p>
+			</div>
+		</div>
+		</div>
+		</div>
+
+
+
+		<div class="footer">
+			<p>设计制作：计算机科学三班麻子平</p>
+			<b>学号：202208010326</b>
+
+		</div>
+		<!-- 意见箱弹窗 -->
+
+
+		<script src="./d2at122a.json"></script>
+		<script src="./d2at122a.js"></script>
+		<script>
+			var animData = {
+				wrapper: document.getElementById('bodymovin'),
+				animType: 'svg',
+				loop: true,
+				prerender: true,
+				autoplay: true,
+				path: 'img/programmer.json', //json动画路径
+
+			};
+			var anim = bodymovin.loadAnimation(animData); //启动动画
+			bodymovin.setSubframeRendering(false);
+		</script>
+		<button type="button" onclick="dianwo()">我的建议</button>
+		<div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+				<div id="header9">
+					<span>
+						<fieldset
+							style="text-align: center;background-color: antiquewhite;width: 80%;margin-left: 10%;">
+							<legend>意见</legend>
+							<form
+								action="https://cn.bing.com/search?q=%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%BA%86%E5%95%8A%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%98%AF%E8%BF%98%E6%B2%A1%E6%8E%A5%E5%8F%A3&qs=n&form=QBRE&sp=-1&lq=0&pq=%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%BA%86%E5%95%8A%EF%BC%8C%E5%8F%AF%E8%83%BD%E6%98%AF%E8%BF%98%E6%B2%A1%E6%8E%A5%E5%8F%A3&sc=10-16&sk=&cvid=526A9785EE7E40649872005B42CFF409&ghsh=0&ghacc=0&ghpl="
+								method="post">
+
+
+								*电子邮件:<input type="email" name="zh" required/><br>
+								*密 码 ： <input type="password" name="mm" required /><br>
+								*选择性别:
+								男<input type="radio" name="xb" value="男" checked="checked" required />
+								女<input type="radio" name="xb" value="女" />
+								不清楚<input type="radio" name="xb" valuAe="不清楚" />
+								<br>
+								业余时间都在干嘛：<br>
+								唱<input type="checkbox" name="ah" value="唱">
+								跳<input type="checkbox" name="ah" value="跳">
+								rap<input type="checkbox" name="ah" value="rap"><br>
+								篮球<input type="checkbox" name="ah" value="篮球">
+								music<input type="checkbox" name="ah" value="music">
+
+								<br>
+								*日期：
+								<input type="date" name="rq" required>
+								<input type="time" required><br>
+								参考文献：
+								<input type="file" name="wj" multiple><br>
+
+								<input type="submit" value="提交" />
+								<input type="reset" value="重置" />
+
+
+
+							</form>
+						</fieldset>
+					</span>
+					<div id="header9-right" onclick="hidder()">x</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('zhezhao').style.display = "none";
+
+			function dianwo() {
+				document.getElementById('zhezhao').style.display = "";
+			}
+
+			function hidder() {
+				document.getElementById('zhezhao').style.display = "none";
+			}
+		</script>
+
+
+
+	</body>
+
+
+
+</html>
