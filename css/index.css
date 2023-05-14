@@ -1,0 +1,267 @@
+* {
+
+	margin: 0;
+	padding: 0;
+
+}
+
+
+body {
+	background-image: url("");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+body {
+	font-size: 16px;
+	;
+}
+
+.li {
+	list-style: none;
+}
+
+
+
+.logo {
+	width: 100%;
+	text-align: center;
+	margin: 0 0;
+	;
+}
+
+.logo h4 {
+	text-shadow: 3px 3px 3px black;
+	cursor: pointer;
+	font-size: 35px;
+	letter-spacing: 0px;
+	margin: 20px 0 5px 0;
+}
+
+.logo h4:hover {
+	color: #ce8460;
+}
+
+
+
+.nav>ul {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+.nav>ul>li {
+	position: relative;
+
+	margin: 0 20px;
+
+}
+
+.nav ul li a {
+	color: #333;
+	text-decoration: none;
+}
+
+.nav ul li a:hover {
+	color: #ce8460;
+
+}
+
+
+
+
+
+.nav>ul>li:hover ul {
+	display: block;
+
+}
+
+.footer {
+	margin-top: 100px;
+	width: 100%;
+	color: #fff;
+	text-align: center;
+
+}
+
+
+
+#gerengjianjie {
+
+
+	overflow: hidden;
+	background-color: antiquewhite;
+	width: 100%;
+
+
+}
+
+body,
+html {
+	scroll-behavior: smooth;
+}
+
+/* 返回顶部标签 */
+#scroll-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	font-size: 10px;
+	color: #ffffff;
+	background-color: #333333;
+	padding: 20px;
+	border-radius: 50%;
+	opacity: 1;
+	z-index: 9999;
+}
+
+#scroll-to-top:hover {
+	opacity: 1;
+}
+
+.fas.fa-arrow-up {
+	pointer-events: none;
+}
+
+/* --------------------------------- */
+/* 我的家乡部分 */
+#wodejiaxiang {
+	margin-top: 10px;
+	background-color: cadetblue;
+	opacity: 0.9;
+	border-radius: 20px;
+	box-shadow: 3px -3px 3px 2px dimgrey;
+}
+
+
+
+
+
+.chadongtupian {
+
+
+	display: block;
+	margin: auto;
+	box-shadow: black;
+	width: 60%;
+	border-radius: 20%;
+	box-shadow: 9px 9px 9px #333;
+
+}
+
+.neirong {
+	opacity: 0.6;
+	text-shadow: 0.3px 0.3px black;
+	font-size: 20px;
+	letter-spacing: 6px;
+	box-shadow: 3px 3px 3px black;
+	background-color: burlywood;
+	margin-left: 10%;
+	border-radius: 40px;
+	padding: 20px;
+	margin: 5px;
+}
+
+/*------------------------------------- ---- */
+
+
+
+#logo2 {
+	margin-top: 10%;
+	width: 40%;
+	
+ height: 20%
+   
+}
+
+
+
+#miaoshu>ul>li {
+	list-style-type: none;
+	font-size: 120%;
+	margin-left: 5%;
+	padding: 2px;
+}
+
+
+#gerengjianjie1 {
+	height: 100%;
+	margin-top: 10%;
+	width: 45%;
+	font-weight: 700;
+	box-shadow: 7px 2px 6px 6px black;
+
+
+}
+/* 动画端 */
+#bodymovin {
+	
+	
+	width: 45%;
+	
+	
+	
+}
+
+/* 学习计划 */
+.em {
+
+	border-radius: 68px;
+	background-color: antiquewhite;
+	color: #333;
+	padding: 10px;
+	margin: 1% auto;
+	width: 80%;
+	box-shadow: 0px 0px 10px 5px #aaa;
+	font-size: 15px;
+	font-weight: 100;
+	letter-spacing: 3px;
+
+}
+
+button {
+	border-radius: 15px;
+	text-align: center;
+	font-size: 25px;
+	background-color: wheat;
+}
+
+#xuexijihua {
+	background-color: antiquewhite;
+}
+
+/* 建议箱弹窗设置 */
+.zhezhao{
+				position: fixed;
+				left: 0px;
+				top: 0px;
+				background: #000;
+				width: 100%;
+				height: 100%;
+				opacity: 0.8;
+			}
+			.tankuang{
+				position: relative;
+				background: #fff;
+				
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header9{
+				
+				height: 40px;
+			}
+			#header9-right{
+				
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: white;
+				color: black;
+				right: 5px;
+				top: 5px;
+				text-align: center;
+			}
